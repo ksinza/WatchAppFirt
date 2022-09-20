@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A15BB59A28DA69490027DE5E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BB59928DA69490027DE5E /* Note.swift */; };
+		A15BB59C28DA6BE10027DE5E /* AddNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BB59B28DA6BE10027DE5E /* AddNote.swift */; };
 		A1EFFE2328CE5CC8009DE35E /* NotesApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A1EFFE2228CE5CC8009DE35E /* NotesApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A1EFFE2828CE5CD2009DE35E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EFFE2728CE5CD2009DE35E /* Assets.xcassets */; };
 		A1EFFE2E28CE5CD2009DE35E /* NotesApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A1EFFE2D28CE5CD2009DE35E /* NotesApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -62,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A15BB59928DA69490027DE5E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		A15BB59B28DA6BE10027DE5E /* AddNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNote.swift; sourceTree = "<group>"; };
 		A1EFFE1E28CE5CC7009DE35E /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EFFE2228CE5CC8009DE35E /* NotesApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotesApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EFFE2728CE5CD2009DE35E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				A1EFFE4128CE5CD6009DE35E /* Info.plist */,
 				A1EFFE4228CE5CD6009DE35E /* PushNotificationPayload.apns */,
 				A1EFFE3E28CE5CD6009DE35E /* Preview Content */,
+				A15BB59928DA69490027DE5E /* Note.swift */,
+				A15BB59B28DA6BE10027DE5E /* AddNote.swift */,
 			);
 			path = "NotesApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -266,11 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15BB59C28DA6BE10027DE5E /* AddNote.swift in Sources */,
 				A1EFFE3728CE5CD2009DE35E /* NotificationController.swift in Sources */,
 				A1EFFE3528CE5CD2009DE35E /* ContentView.swift in Sources */,
 				A1EFFE3B28CE5CD2009DE35E /* ComplicationController.swift in Sources */,
 				A1EFFE3328CE5CD2009DE35E /* NotesAppApp.swift in Sources */,
 				A1EFFE3928CE5CD2009DE35E /* NotificationView.swift in Sources */,
+				A15BB59A28DA69490027DE5E /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
