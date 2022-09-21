@@ -12,6 +12,7 @@ struct AddNote: View {
     @State private var notes = [Note]()
     @State  private var text = ""
 
+    @Environment(\.presentationMode)  var presentation
     
     var body: some View {
        
@@ -28,14 +29,21 @@ struct AddNote: View {
                 let note = Note(title: text)
                 
                 notes.append(note)
+                
+                Tools.shared.save(array: notes)
 
                 text = ""
-                
+                presentation.wrappedValue.dismiss()
                 
             }
             
             
         }
+        .onAppear(perform: {
+            
+            notes = Tools.shared.load()
+            
+        })
         
        
         

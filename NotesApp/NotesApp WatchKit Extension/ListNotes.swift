@@ -9,32 +9,45 @@ import SwiftUI
 
 struct ListNotes: View {
     
-    @State private var notes: [Note] = [Note(title: "Uno"),
-                           Note(title: "dos"), Note(title: "tres")]
+//    @State private var notes: [Note] = [Note(title: "Uno"),
+//                           Note(title: "dos"), Note(title: "tres")]
     
+    @State private var notes: [Note] = [Note] ()
+    
+    
+                                        
     var body: some View {
       
-        
-        List{
+        VStack{
             
-            ForEach(0..<notes.count, id: \.self) {
-                i in
+            Text("Notas \(notes.count)")
+            
+            List{
                 
-                NavigationLink(
-                    destination: DetailNote(note: notes[i]),
+                ForEach(0..<notes.count, id: \.self) {
+                    i in
                     
-                    label: {
+                    NavigationLink(
+                        destination: DetailNote(note: notes[i]),
                         
-                        Text(notes[i].title).lineLimit(1)
-                    })
+                        label: {
+                            
+                            Text(notes[i].title).lineLimit(1)
+                        })
+    //                Text("\(notes[i].title) - \(notes[i].creationDate )").lineLimit(1)
+                }
+                .onDelete(perform: delete )
                 
-//                Text("\(notes[i].title) - \(notes[i].creationDate )").lineLimit(1)
+                
             }
             
-            .onDelete(perform: delete )
-            
-            
         }
+        .onAppear(perform: {
+            
+            notes = Tools.shared.load()
+            
+        })
+      
         
         
     }
@@ -48,8 +61,10 @@ struct ListNotes: View {
 
             
         }
+        Tools.shared.save(array: notes)
         
     }
+    
     
     
 }

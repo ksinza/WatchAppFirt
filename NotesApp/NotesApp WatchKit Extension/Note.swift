@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct Note: Identifiable{
+//Codable : to work json.. save and get data
+
+struct Note: Codable, Identifiable{
     var id: UUID
     
     var  title: String
