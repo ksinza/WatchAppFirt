@@ -13,7 +13,8 @@ struct NotesAppApp: App {
         WindowGroup {
             NavigationView {
                 //ContentView()
-                AddNote()
+                //AddNote()
+                ListNotes()
             }
         }
 
